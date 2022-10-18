@@ -7,6 +7,7 @@ using System;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] InputAction movement;
+    [SerializeField] InputAction shoot;
     [SerializeField] float controllerSpeed = 30f;
     [SerializeField] float xRange = 17f;
     [SerializeField] float yRange = 11f;
@@ -14,23 +15,27 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = 10f;
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = 20f;
+    [SerializeField] GameObject[] lasers;
 
     float yThrow, xThrow;
 
     void OnEnable ()
     {
         movement.Enable();
+        shoot.Enable();
     }
 
     void OnDisable ()
     {
         movement.Disable();
+        shoot.Disable();
     }
 
     void Update()
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessShoot();
     }
 
     void ProcessRotation() 
@@ -69,5 +74,24 @@ public class PlayerController : MonoBehaviour
 
         // Debug.Log(xThrow);
         // Debug.Log(yThrow);
+    } 
+
+    void ProcessShoot() {
+        if(shoot.ReadValue<float>() > 0.5)
+        {
+            SetLasers(true);
+        }
+        else {
+            SetLasers(false);
+        }
+    }
+
+    void SetLasers(bool isActive)
+    {
+        foreach(GameObject laser in lasers) 
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
+        }
     }
 }
