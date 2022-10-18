@@ -147,7 +147,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3647519839137096397, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
       propertyPath: m_Name
-      value: 5.4
+      value: PlayerShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956579473971657367, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156187347420126326, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4167315488386627703, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
       propertyPath: m_RootOrder
@@ -193,10 +201,64 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4506078606316221308, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: shoot.m_Id
+      value: e86eb283-fac6-4765-8f07-93c025dbc35a
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: shoot.m_Name
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 7878839983511032813}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1117041276733895010}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: shoot.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: shoot.m_SingletonActionBindings.Array.data[0].m_Id
+      value: e1d1f4eb-e0fb-4f59-bebd-76efaf5a3880
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: shoot.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443574807221088804, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+      propertyPath: shoot.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Shoot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+--- !u!1 &1117041276733895010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8237595614788324454, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+  m_PrefabInstance: {fileID: 9066122694200278276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4901061901778060659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4167315488386627703, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
+  m_PrefabInstance: {fileID: 9066122694200278276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7878839983511032813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1190663026382728937, guid: 6b03e352fe25f41a19d14cd8ee1096f1, type: 3}
   m_PrefabInstance: {fileID: 9066122694200278276}
   m_PrefabAsset: {fileID: 0}

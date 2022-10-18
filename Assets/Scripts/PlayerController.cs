@@ -6,14 +6,28 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+
+
+    [Header("General Setup Settings")]
     [SerializeField] InputAction movement;
     [SerializeField] InputAction shoot;
+    [Tooltip("Speed at which the ship moves based on controls")] 
     [SerializeField] float controllerSpeed = 30f;
+    [Tooltip("How far the ship can move on X-Axis")] 
     [SerializeField] float xRange = 17f;
+    [Tooltip("How far the ship can move on Y-Axis")]
     [SerializeField] float yRange = 11f;
+
+    [Header("Rotation based on position")]
+    [Tooltip("How much the position on X-Axis affects the pitch")] 
     [SerializeField] float positionPitchFactor = 2f;
-    [SerializeField] float controlPitchFactor = 10f;
+    [Tooltip("How much the position on Y-Axis affects the yaw")] 
     [SerializeField] float positionYawFactor = 2f;
+
+    [Header("Rotation based on controls")]
+    [Tooltip("How much the controls affect the pitch")] 
+    [SerializeField] float controlPitchFactor = 10f;
+    [Tooltip("How much the controls affect the roll")] 
     [SerializeField] float controlRollFactor = 20f;
     [SerializeField] GameObject[] lasers;
 
@@ -93,5 +107,6 @@ public class PlayerController : MonoBehaviour
             var emissionModule = laser.GetComponent<ParticleSystem>().emission;
             emissionModule.enabled = isActive;
         }
-    }
+    } 
 }
+
