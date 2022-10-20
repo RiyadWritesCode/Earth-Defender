@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         if(shoot.ReadValue<float>() > 0.5)
         {
             SetLasers(true);
+            
         }
         else {
             SetLasers(false);
