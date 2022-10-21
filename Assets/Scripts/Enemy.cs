@@ -34,13 +34,13 @@ public class Enemy : MonoBehaviour
     void ProcessHit()
     {
         hitpoints--;
-        sb.IncreaseScore(scorePerHit);
         var hitVFX = Instantiate(hit, transform.position, Quaternion.identity);
         hitVFX.transform.parent = runtime.transform;
     }
 
     void KillEnemy()
     {
+        sb.IncreaseScore(scorePerHit);
         var crashVFX = Instantiate(crash, transform.position, Quaternion.identity);
         crashVFX.transform.parent = runtime.transform;
         Destroy(gameObject);
